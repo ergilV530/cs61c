@@ -1,4 +1,9 @@
-1.
-2.
-3.
-4.
+i.Ls -l
+ii.Mv
+iii.Chmod
+iv.Pwd
+v.ping
+vi.find
+vii.ps
+viii.kill
+ix.diff
