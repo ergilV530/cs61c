@@ -1,8 +1,11 @@
-1.
-2.
+1.jki, kji
+2.jik, ijk
 
 --- lines below are ignored by the AG ---
 
 Checkoff Question 1:
+jki and kji achieve the best performance because they maximize spatial locality by ensuring the innermost loop accesses contiguous memory locations (stride-1) in column-major layout, allowing effective cache line utilization.
 Checkoff Question 2:
+ijk and jik perform worst because their innermost loop results in stride-n accesses, causing poor spatial locality and frequent cache misses, which severely degrades performance.
 Checkoff Question 3:
+Inner loop stride determines whether memory access is contiguous or not. Stride-1 leads to high spatial locality and cache hits, while stride-n causes frequent cache misses and poor performance.

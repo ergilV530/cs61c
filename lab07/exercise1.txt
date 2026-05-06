@@ -1,24 +1,39 @@
 Scenario 1
-    1.
-    2.
-    3.
+    1.Step size, Cache size
+      because step size in bytes = cache size in bytes
+    2.Hit Rate = 0.0
+    3.Step size, 1(hit rate: 50%) 或 Array size, 32(hit rate: 75%)
 
 Scenario 2
-    1.
-    2.
-    3.
+    1.2
+    2.MHHH
+    3.The hit rate remains 3/4.
 
 Scenario 3
-    1.
-    2.
-    3.
-    4.
-    5.
+    1.L1_HR = 50%, L2_HR = 0%, Overall_HR = 50%
+    2.32 accesses to L1 cache. 16 of them are missed.
+    3.16 accesses to L2 cache.
+    4.Rep Count（a2 increase）
+    5.=, =, +, =
 
 --- lines below are ignored by the AG ---
 
 Checkoff Question 1:
+	Cause different memory access maps to the same cache set(#0) 
+	and continuously evicts the previous one. 
+	Even repeating loop many times doesn't help.
 Checkoff Question 2:
+	Step size, 1(hit rate: 50%) 或 Array size, 32(hit rate: 75%)
 Checkoff Question 3:
+	First read is miss. 
+	Then first write is hit. 
+	Step size times length is 8 bytes, which is half block size(16 bytes).
 Checkoff Question 4:
+	Check the pattern "MHHH" per iteration.
 Checkoff Question 5:
+	We should instead try to access a block of the array at a time 
+	and apply all of the functions (reps) to that block so we can be 
+	completely done with it before moving on, thereby keeping that 
+	block hot in the cache and not having to circle back to it later on.
+Checkoff Question 6:
+	Increase temporal locality rather than changing the spatial structure.
